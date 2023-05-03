@@ -114,6 +114,7 @@ ipch/
 
 # Visual Studio profiler
 *.psess
+*.vs
 *.vsp
 *.vspx
 *.sap

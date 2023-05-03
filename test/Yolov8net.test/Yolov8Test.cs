@@ -64,10 +64,10 @@ namespace Yolov8Net.test
             }
             Directory.CreateDirectory(outputPath);
 
-            using var yolo = YoloV8Predictor.Create("./assets/yolov8m.onnx");
+            using var yolo = YoloV8Predictor.Create("./assets/best.onnx");
             Assert.NotNull(yolo);
 
-            using var image = Image.FromFile("Assets/input.jpg");
+            using var image = Image.FromFile("Assets/test.png");
             var predictions = yolo.Predict(image);
 
             Assert.NotNull(predictions);
@@ -83,10 +83,10 @@ namespace Yolov8Net.test
             // NOTE:  Must have CUDA Dev pack installed
 
 
-            using var yolo = YoloV8Predictor.Create("./assets/yolov8m.onnx", null, true);
+            using var yolo = YoloV8Predictor.Create("./assets/best.onnx", null, true);
             Assert.NotNull(yolo);
 
-            using var image = Image.FromFile("Assets/input.jpg");
+            using var image = Image.FromFile("Assets/test.jpg");
             var predictions = yolo.Predict(image);
 
             Assert.NotNull(predictions);

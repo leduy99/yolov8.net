@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -14,25 +13,23 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/sstainba/Yolov8.Net</RepositoryUrl>
     <PackageTags>Yolo;Yolov5;Yolov8;ComputerVision;ML;ONNX</PackageTags>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <OldToolsVersion>15.0</OldToolsVersion>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <Optimize>False</Optimize>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>portable</DebugType>
     <Optimize>True</Optimize>
   </PropertyGroup>
-
   <ItemGroup>
     <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.ML.OnnxRuntime.Managed" Version="1.13.1" />
     <PackageReference Include="MinVer" Version="4.3.0">
@@ -41,5 +38,4 @@
     </PackageReference>
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
-
 </Project>
